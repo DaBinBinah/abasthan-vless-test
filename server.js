@@ -1,14 +1,14 @@
 // Abasthan Node.js Web Service: static page on / + VLESS-WS on /577dd7e0
 // Pure Node, no Xray binary: Abasthan has no Dockerfile/container deploy,
 // only Node/Python/PHP/Static from Git, $PORT env, bind 0.0.0.0.
-// VLESS UUID: fc8b6a71-8f59-4e41-9498-29f310a2795d (dedicated to this node)
+// VLESS UUID: 5efc7508-eaa9-4da4-ae50-366867aa6c0c (dedicated to this node)
 const http = require('http');
 const net = require('net');
 const fs = require('fs');
 const path = require('path');
 const { WebSocketServer } = require('ws');
 
-const UUID = 'fc8b6a71-8f59-4e41-9498-29f310a2795d';
+const UUID = '5efc7508-eaa9-4da4-ae50-366867aa6c0c';
 const WS_PATH = '/577dd7e0';
 const PORT = parseInt(process.env.PORT || '3000', 10);
 
@@ -24,7 +24,7 @@ const server = http.createServer((req, res) => {
       res.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
       res.end(data);
     });
-  } else if (req.url === '/health') {
+  } else if (req.url === '/health') 
     res.writeHead(200, { 'Content-Type': 'text/plain' });
     res.end('ok');
   } else {
